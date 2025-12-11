@@ -1,0 +1,2 @@
+# -.config-
+Dotfiles Management System
