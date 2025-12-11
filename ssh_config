@@ -3,9 +3,6 @@
 
 # Global defaults
 Host *
-    # Use SSH protocol version 2
-    Protocol 2
-    
     # Keep connections alive
     ServerAliveInterval 60
     ServerAliveCountMax 3
