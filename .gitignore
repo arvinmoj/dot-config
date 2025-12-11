@@ -1,0 +1,17 @@
+# Backup files created by install script
+*.backup
+
+# Local customization files
+*.local
+
+# Temporary test directories
+test_*/
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
