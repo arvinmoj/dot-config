@@ -1,0 +1,38 @@
+[user]
+	# Configure your name and email
+	name = Your Name
+	email = your.email@example.com
+
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+
+[color]
+	ui = auto
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	lg = log --oneline --graph --decorate --all
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	amend = commit --amend
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[init]
+	defaultBranch = main
