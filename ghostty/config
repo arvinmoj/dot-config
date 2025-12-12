@@ -1,0 +1,68 @@
+# Visual theme: Auto-switches based on macOS light/dark mode. Catppuccin is soft and eye-friendly for long sessions.
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+
+# Font: JetBrains Mono is a free, monospaced font optimized for code. Enable ligatures for better readability in scripts.
+font-family = JetBrains Mono
+font-size = 15
+# Enables programming ligatures (e.g., => becomes →)
+font-feature = +liga
+
+# Thicken fonts slightly for better contrast on high-DPI Retina displays.
+font-thicken = true
+# font-thicken-strength must be an integer between 0 and 255. Converted 0.2 (20%) to 51.
+font-thicken-strength = 51
+
+# Cursor: Block style without blinking to reduce visual noise.
+cursor-style = block
+cursor-style-blink = false
+
+# Background: Semi-transparent with blur for a frosted glass effect, integrating nicely with macOS desktop backgrounds.
+background = #020c12
+background-opacity = 0.79
+background-blur = true
+
+# Window styling: Use tabs in the native title bar for a clean, integrated look. No extra decorations.
+macos-titlebar-style = tabs
+# Reverted to 'none' since fullscreen is disabled
+window-decoration = none
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+# Matches padding to background for seamless appearance.
+window-padding-color = background
+
+# Color space: Use Display P3 for richer colors on modern Mac displays.
+window-colorspace = display-p3
+
+# Unfocused splits: Slightly dim them for better focus during multi-pane workflows (e.g., tailing logs).
+unfocused-split-opacity = 0.8
+
+# Minimum contrast: Ensure text is readable even in low-light environments.
+minimum-contrast = 4.5
+
+# --- DevOps & Fish Shell Best Practices ---
+
+# Shell Integration: Enables advanced features for Fish shell (e.g., jump to prompt, directory tracking).
+shell-integration = fish
+
+# macOS Option Key: Treat Option as Alt (Meta). Essential for Fish shell navigation (e.g., Alt+f/b to move words).
+macos-option-as-alt = true
+
+# Fullscreen: Use non-native fullscreen for instant transitions without the slow macOS animation.
+macos-non-native-fullscreen = true
+
+# Keybindings: Efficient window management for DevOps workflows.
+# Splits
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+w=close_surface
+keybind = cmd+shift+w=close_window
+
+# Navigation
+keybind = cmd+k=clear_screen
+# Jump to previous/next prompt - incredibly useful for scrolling through long build logs.
+keybind = cmd+up=jump_to_prompt:-1
+keybind = cmd+down=jump_to_prompt:1
+
+# Quick Terminal: Toggle a floating terminal window with a global shortcut (Cmd+`).
+keybind = global:cmd+`=toggle_quick_terminal
